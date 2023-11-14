@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div class="sign-up">
+        <h1 class="sign-up-header">Sign Up</h1>
+        
+        <form class="sign-up-form" action="#">
+            <div class="sign-up-double-input">
+                <div class="sign-up-text-input">
+                    <input id="first-name" type="text" placeholder="Yeasin" required>
+                    <label for="first-name">First Name</label>
+                </div>
+                
+                <div class="sign-up-text-input">
+                    <input id="last-name" type="text" placeholder="Arafat" required>
+                    <label for="last-name">Last Name</label>
+                </div>
+            </div>
+
+            <div class="sign-up-text-input">
+                <input id="email" type="email" placeholder="yeasinarafat@gmail.com" required>
+                <label for="email">Email Address</label>
+            </div>
+
+            <div class="sign-up-double-input">
+                <div class="sign-up-text-input">
+                    <input id="password" type="password" required>
+                    <label for="password">Password</label>
+                </div>
+
+                <div class="sign-up-text-input">
+                    <input id="confrim-password" type="password" required>
+                    <label for="confrim-password">Confrim Password</label>
+                </div>
+            </div>
+
+            <div>
+                <input id="terms" type="checkbox" name="terms" required>
+                <label for="terms">I Agree to the Terms & Privacy</label>
+            </div>
+
+            <button class="sign-up-button" type="submit">Sign Up</button>
+        </form>
+    </div>
+</body>
+</html>

@@ -1,0 +1,102 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap");
+
+:root {
+    --ff-base: "Poppins", sans-serif;
+
+    --fw-regular: 400;
+    --fw-medium: 500;
+
+    --clr-white: #ffffff;
+}
+
+/*  */
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+}
+
+body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+    display: block;
+    max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    overflow-wrap: break-word;
+}
+
+#root,
+#__next {
+    isolation: isolate;
+}
+
+/*  */
+
+body {
+    display: grid;
+    place-items: center;
+    height: 100vh;
+    font-family: var(--ff-base);
+
+    /*  */
+    background-color: bisque;
+}
+
+.sign-up {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--clr-white);
+
+    /*  */
+    padding: 85px;
+    border-radius: 35px;
+    max-width: 500px;
+}
+
+.sign-up-form {
+    display: flex;
+    flex-direction: column;
+
+    /*  */
+    gap: 25px;
+}
+
+.sign-up-double-input {
+    display: flex;
+}
+
+.sign-up-text-input {
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+.sign-up-text-input > input {
+    width: 100%;
+}
