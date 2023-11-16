@@ -141,12 +141,3 @@ label {
 .sign-up-text-input > input.invalid {
     border-color: red;
 }
-
-
-/* .valid {
-    border-color: var(--clr-green);
-} */
-
-/* .invalid {
-    border-color: red;
-} */

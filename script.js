@@ -6,7 +6,7 @@ const password = document.querySelector("#password");
 const confirmPassword = document.querySelector("#confirm-password");
 
 signUp.addEventListener("submit", (event) => {
-    //
+    handleSubmit(event);
 });
 
 fristName.addEventListener("input", (event) => {
@@ -14,18 +14,12 @@ fristName.addEventListener("input", (event) => {
 });
 
 lastName.addEventListener("input", (event) => {
-    handleInvalid(lastName); 
+    handleInvalid(lastName);
 });
 
 email.addEventListener("input", (event) => {
-    if (!email.checkValidity()) {
-        email.classList.add("invalid");
-        email.classList.remove("valid");
-    } else {
-        email.classList.add("valid");
-        email.classList.remove("invalid");
-    }
-})
+    handleInvalid(email);
+});
 
 password.addEventListener("input", (event) => {
     checkPassword();
@@ -85,3 +79,15 @@ function handleInvalid(element) {
         element.classList.remove("invalid");
     }
 }
+
+function handleSubmit(event) {
+    const passwordRegex = new RegExp(/^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/);
+    const passwordValue = password.value;
+    const confirmPasswordValue = confirmPassword.value;
+
+    if (passwordValue !== confirmPasswordValue) {
+        event.preventDefault();
+    } else if (!passwordRegex.test(passwordValue)) {
+        event.preventDefault();
+    }
+};
