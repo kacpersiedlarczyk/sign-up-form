@@ -14,36 +14,38 @@
         <form class="sign-up-form" action="#">
             <div class="sign-up-double-input">
                 <div class="sign-up-text-input">
-                    <input id="first-name" type="text" placeholder="Yeasin" required>
                     <label for="first-name">First Name</label>
+                    <input id="first-name" type="text" placeholder="Yeasin" minlength="1" required>
                 </div>
                 
                 <div class="sign-up-text-input">
-                    <input id="last-name" type="text" placeholder="Arafat" required>
                     <label for="last-name">Last Name</label>
+                    <input id="last-name" type="text" placeholder="Arafat" minlength="1" required>
                 </div>
             </div>
 
             <div class="sign-up-text-input">
-                <input id="email" type="email" placeholder="yeasinarafat@gmail.com" required>
                 <label for="email">Email Address</label>
+                <input id="email" type="email" placeholder="yeasinarafat@gmail.com" required>
             </div>
 
             <div class="sign-up-double-input">
                 <div class="sign-up-text-input">
-                    <input id="password" type="password" required>
                     <label for="password">Password</label>
+                    <input id="password" type="password" placeholder="******" required>
+                    <p class="password-error"></p>
                 </div>
 
                 <div class="sign-up-text-input">
-                    <input id="confrim-password" type="password" required>
-                    <label for="confrim-password">Confrim Password</label>
+                    <label for="confirm-password">Confrim Password</label>
+                    <input id="confirm-password" type="password" placeholder="******" required>
+                    <p class="match-error"></p>
                 </div>
             </div>
 
             <div>
                 <input id="terms" type="checkbox" name="terms" required>
-                <label for="terms">I Agree to the Terms & Privacy</label>
+                <label for="terms">I Agree to the <u>Terms & Privacy</u></label>
             </div>
 
             <button class="sign-up-button" type="submit">Sign Up</button>
